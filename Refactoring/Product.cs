@@ -10,11 +10,11 @@ namespace Refactoring
     [Serializable]
     public class Product
     {
-        [JsonProperty("Name")]
-        public string Name;
+        [JsonProperty("ProductName")]
+        public string ProductName;
         [JsonProperty("Price")]
         public double Price;
         [JsonProperty("Quantity")]
-        public int Qty;
+        public int Quantity;
     }
 }

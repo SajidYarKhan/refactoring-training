@@ -12,10 +12,10 @@ namespace Refactoring
         public static void Main(string[] args)
         {
             // Load users from data file
-            List<User> users = JsonConvert.DeserializeObject<List<User>>(File.ReadAllText(@"Data\Users.json"));
+            var users = JsonConvert.DeserializeObject<List<User>>(File.ReadAllText(@"Data\Users.json")).ToList();
 
             // Load products from data file
-            List<Product> products = JsonConvert.DeserializeObject<List<Product>>(File.ReadAllText(@"Data\Products.json"));
+            var products = JsonConvert.DeserializeObject<List<Product>>(File.ReadAllText(@"Data\Products.json")).ToList();
 
             Tusc.Start(users, products);
         }
