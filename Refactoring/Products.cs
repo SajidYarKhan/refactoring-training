@@ -97,7 +97,7 @@ namespace Refactoring
 
         private static void CheckQuantity(List<Product> products, int quantity, int response)
         {
-            if (products[response].Quantity <= quantity)
+            if (products[response].Quantity < quantity)
             {
                 ShowMessage("Sorry, " + products[response].ProductName + " is out of stock");
                 Purchase(products, _userName, _password);
